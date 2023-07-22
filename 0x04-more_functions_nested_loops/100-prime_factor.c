@@ -17,28 +17,34 @@
 
 int main(void)
 {
-	long num = 612852475143;
-	long max_prime = -1;
+	long n = 612852475143;
+	long i;
+	long max = -1;
 
-	while (num % 2 == 0)
+	/* divide n by 2 until it is odd */
+	while (n % 2 == 0)
 	{
-		max_prime = 2;
-		num /= 2;
+		max = 2;
+		n /= 2;
 	}
 
-	for (int i = 3; i <= sqrt(num); i += 2)
+	/* find the odd factors of n */
+	for (i = 3; i <= sqrt(n); i += 2)
 	{
-		while (num % i == 0)
-		{
-			max_prime = i;
-			num /= i;
+		/* divide n by i until it is not divisible */
+		while (n % i == 0)
+ 		{
+			max = i;
+			n /= i;
 		}
 	}
 
-	if (num > 2)
-	max_prime = num;
+	/* if n is prime and greater than 2, it is the largest factor */
+	if (n > 2)
+		max = n;
 
-	printf("%ld\n", max_prime);
+	/* print the largest factor */
+	printf("%ld\n", max);
 
 	return (0);
 }
