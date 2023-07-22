@@ -3,22 +3,34 @@
 /**
  * print_number - prints an integer
  *
- * @n: integer to print
+ * @n: the integer to print
 */
-
 void print_number(int n)
 {
-	unsigned int num = n;
+	int power;
+	int digit;
+	int sign = 1;
 
+	/* determine sign of n */
 	if (n < 0)
 	{
+		sign = -1;
+		/* print negative sign */
 		_putchar('-');
-		num = -n;
 	}
 
-	if (num / 10)
-		print_number(num / 10);
+	/* find largest power of 10 */
+	power = 1;
+	while (n / power / 10 != 0)
+		power *= 10;
 
-		_putchar((num % 10) + '0');
+	/* print each digit */
+	while (power != 0)
+	{
+		digit = n / power % 10 * sign;
+		_putchar(digit + '0');
+		power /= 10;
+	}
 }
+
 
