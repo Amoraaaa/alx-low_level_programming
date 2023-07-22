@@ -33,7 +33,7 @@ int main(void)
 	{
 		/* divide n by i until it is not divisible */
 		while (n % i == 0)
- 		{
+		{
 			max = i;
 			n /= i;
 		}
