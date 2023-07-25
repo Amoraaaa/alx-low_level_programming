@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 void reset_to_98(int *n);
-oid swap_int(int *a, int *b);
+void swap_int(int *a, int *b);
 int _strlen(char *s);
 void _puts(char *str);
 void print_rev(char *s);
