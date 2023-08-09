@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -10,7 +8,7 @@
  * @av: Argument vector
  *
  * Return: Pointer to new string, or NULL on failure
-*/
+ */
 
 char *argstostr(int ac, char **av)
 {
@@ -21,10 +19,10 @@ char *argstostr(int ac, char **av)
 		return NULL;
 
 	for (i = 0; i < ac; i++)
-		len += strlen(av[i]) + 1; 
+		len += strlen(av[i]) + 1;
 
 	str = malloc(sizeof(char) * (len + 1));
-	
+
 	if (str == NULL)
 		return NULL;
 
@@ -41,3 +39,4 @@ char *argstostr(int ac, char **av)
 
 	return str;
 }
+
