@@ -3,8 +3,10 @@
 #include <string.h>
 
 /**
- * argstostr - Concatenates all arguments of the program into a string
+ * argstostr - Concatenates all arguments of the program
+ *
  * @ac: Argument count
+ *
  * @av: Argument vector
  *
  * Return: Pointer to new string, or NULL on failure
