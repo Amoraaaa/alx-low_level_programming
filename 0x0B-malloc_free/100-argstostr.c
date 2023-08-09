@@ -1,4 +1,6 @@
 #include <string.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * argstostr - Concatenates all arguments of the program
