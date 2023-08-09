@@ -3,10 +3,15 @@
 #include <string.h>
 
 /**
- * main - check the code for ALX School students.
+ * argstostr - Concatenates all arguments of the program
  *
- * Return: Always 0.
- */
+ * @ac: Argument count
+ *
+ * @av: Argument vector
+ *
+ * Return: Pointer to new string, or NULL on failure
+*/
+
 
 char *argstostr(int ac, char **av)
 {
