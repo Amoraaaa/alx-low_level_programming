@@ -1,7 +1,13 @@
-#ifndef DOG_H /* Include guard */
-#define DOG_H
-
 #include <stdio.h>
+
+/**
+ * init_dog - initialize a variable of type struct dog
+ * @d: pointer to struct dog to initialize
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ */
+
 typedef struct dog
 {
 	char *name;
@@ -19,4 +25,3 @@ void print_dog(struct dog *d);
 
 
 
-#endif
