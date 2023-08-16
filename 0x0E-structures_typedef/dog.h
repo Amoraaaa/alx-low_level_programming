@@ -1,18 +1,7 @@
-#include <stdio.h>
+#ifndef DOG_H /* Include guard */
+#define DOG_H
 
-/**
- * struct dog - a new type
- *
- * @name: name of dog
- *
- * @age: age of dog
- *
- * @owner: owner of dog
- *
- * Description: Longer description
- *
- * Return: return (0)
- */
+#include <stdio.h>
 typedef struct dog
 {
 	char *name;
@@ -20,3 +9,14 @@ typedef struct dog
 	char *owner;
 } dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
+
+
+
+
+
+
+
+
+#endif
